@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import * as fieldnote from '../index.js';
+import * as server from '../server.js';
 
 describe('fieldnote-ui public API', () => {
   it('exports the five first-class primitives', () => {
@@ -8,7 +9,7 @@ describe('fieldnote-ui public API', () => {
     }
   });
 
-  it('exports layouts, charts, tokens, theme and icons from one entry point', () => {
+  it('exports layouts, charts, theme and icons from the client entry point', () => {
     for (const name of [
       'NotebookLayout',
       'ObservatoryLayout',
@@ -22,13 +23,18 @@ describe('fieldnote-ui public API', () => {
       'DecisionImpactChart',
       'LearningChart',
       'FieldNoteProvider',
-      'themeInitScript',
-      'tokens',
-      'createCssVariables',
       'ObservationIcon',
       'KnowledgeNav',
     ]) {
       expect(fieldnote).toHaveProperty(name);
     }
+  });
+
+  it('keeps server-safe helpers on fieldnote-ui/server (callable from RSC)', () => {
+    for (const name of ['tokens', 'createCssVariables', 'themeInitScript', 'DEFAULT_STORAGE_KEY']) {
+      expect(server).toHaveProperty(name);
+    }
+    expect(typeof server.themeInitScript()).toBe('string');
+    expect(server.tokens.intents).toContain('decision');
   });
 });

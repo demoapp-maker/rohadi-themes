@@ -6,7 +6,6 @@
  *   import 'fieldnote-ui/styles.css';
  *   import { ObservationCard, EvidenceCard, InsightCard, DecisionCard, LearningCard } from 'fieldnote-ui';
  */
-export * from '@fieldnote-ui/tokens';
 export * from '@fieldnote-ui/theme';
 export * from '@fieldnote-ui/icons';
 export * from '@fieldnote-ui/ui';

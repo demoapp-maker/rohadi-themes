@@ -1,12 +1,25 @@
 import { defineConfig } from 'tsup';
 
-export default defineConfig({
-  entry: { index: 'src/index.ts' },
-  format: ['esm', 'cjs'],
+const common = {
+  format: ['esm', 'cjs'] as ('esm' | 'cjs')[],
   dts: true,
   sourcemap: true,
-  clean: true,
   external: ['react', 'react-dom', '@fieldnote-ui/tokens'],
-  banner: { js: '"use client";' },
-  outExtension: ({ format }) => ({ js: format === 'esm' ? '.js' : '.cjs' }),
-});
+  outExtension: ({ format }: { format: string }) => ({ js: format === 'esm' ? '.js' : '.cjs' }),
+};
+
+export default defineConfig([
+  {
+    ...common,
+    entry: { index: 'src/index.ts' },
+    clean: true,
+    // Client entry: hooks and the provider. Marked for the RSC boundary.
+    banner: { js: '"use client";' },
+  },
+  {
+    ...common,
+    entry: { server: 'src/server.ts' },
+    clean: false,
+    // Server-safe entry: no directive, so it can be called from server components.
+  },
+]);

@@ -1,0 +1,367 @@
+/*
+ * Documentation-only styles. Everything here is built from FieldNote tokens
+ * (--fn-*), so light and dark mode follow the theme automatically.
+ * Components never depend on these classes.
+ */
+
+.docs-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fn-space-4);
+  min-width: 0;
+}
+
+.docs-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--fn-space-3);
+}
+
+.docs-grid {
+  display: grid;
+  gap: var(--fn-space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  margin: var(--fn-space-6) 0;
+}
+
+.docs-two-col {
+  display: grid;
+  gap: var(--fn-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+.docs-lede {
+  font-family: var(--fn-font-display);
+  font-size: var(--fn-text-lg);
+  line-height: var(--fn-leading-lg);
+  color: var(--fn-color-text-primary);
+  max-width: 62ch;
+}
+
+.docs-section-lead {
+  color: var(--fn-color-text-secondary);
+  max-width: 66ch;
+}
+
+/* Link cards used on index pages. The whole card is the link. */
+.docs-link-card {
+  display: block;
+  padding: var(--fn-space-5);
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-lg);
+  background: var(--fn-color-surface);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--fn-shadow-xs);
+}
+.docs-link-card:hover {
+  border-color: var(--fn-color-border-strong);
+}
+.docs-link-card:focus-visible {
+  outline: 2px solid var(--fn-color-focus);
+  outline-offset: 3px;
+}
+.docs-link-card__title {
+  font-family: var(--fn-font-display);
+  font-size: var(--fn-text-lg);
+  font-weight: var(--fn-weight-semibold);
+  color: var(--fn-color-text-primary);
+  margin: 0 0 var(--fn-space-2);
+}
+.docs-link-card__body {
+  margin: 0;
+  color: var(--fn-color-text-secondary);
+  font-size: var(--fn-text-sm);
+}
+.docs-link-card__meta {
+  margin-top: var(--fn-space-3);
+  font-size: var(--fn-text-xs);
+  letter-spacing: var(--fn-tracking-wide);
+  text-transform: uppercase;
+  color: var(--fn-color-text-tertiary);
+}
+
+/* Principles and numbered blocks. */
+.docs-principle {
+  border-left: 3px solid var(--fn-color-primary);
+  padding: var(--fn-space-2) 0 var(--fn-space-2) var(--fn-space-5);
+  margin: var(--fn-space-6) 0;
+}
+.docs-principle h3 {
+  margin-top: 0;
+}
+.docs-principle__wrong {
+  color: var(--fn-color-text-secondary);
+  font-size: var(--fn-text-sm);
+}
+
+/* Callout for guidance (not a warning). */
+.docs-callout {
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-md);
+  background: var(--fn-color-surface-sunken);
+  padding: var(--fn-space-4) var(--fn-space-5);
+  margin: var(--fn-space-5) 0;
+}
+.docs-callout > :first-child {
+  margin-top: 0;
+}
+.docs-callout > :last-child {
+  margin-bottom: 0;
+}
+
+/* Thinking loop diagram made of text, so it reads without the graphic. */
+.docs-loop {
+  list-style: none;
+  padding: 0;
+  margin: var(--fn-space-6) 0;
+  display: grid;
+  gap: var(--fn-space-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  counter-reset: stage;
+}
+.docs-loop li {
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-md);
+  padding: var(--fn-space-4);
+  background: var(--fn-color-surface);
+}
+.docs-loop strong {
+  display: block;
+  font-family: var(--fn-font-display);
+  font-size: var(--fn-text-lg);
+  color: var(--fn-color-text-primary);
+}
+.docs-loop span {
+  color: var(--fn-color-text-secondary);
+  font-size: var(--fn-text-sm);
+}
+
+/* Layout schematics: boxes labelled in text, drawn with CSS grid. */
+.docs-diagram {
+  margin: var(--fn-space-5) 0;
+  padding: var(--fn-space-4);
+  border: 1px dashed var(--fn-color-border-strong);
+  border-radius: var(--fn-radius-md);
+  background: var(--fn-color-surface-sunken);
+  display: grid;
+  gap: var(--fn-space-2);
+  font-size: var(--fn-text-xs);
+  color: var(--fn-color-text-secondary);
+}
+.docs-diagram__box {
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-sm);
+  background: var(--fn-color-surface);
+  padding: var(--fn-space-2) var(--fn-space-3);
+  color: var(--fn-color-text-primary);
+  min-height: 2.25rem;
+  display: flex;
+  align-items: center;
+}
+.docs-diagram__box--main {
+  min-height: 4.5rem;
+  border-color: var(--fn-color-primary);
+}
+.docs-diagram__area {
+  display: grid;
+  gap: var(--fn-space-2);
+  grid-template-columns: var(--docs-cols, 1fr);
+}
+
+/* Examples: live preview above its source. */
+.docs-example {
+  margin: var(--fn-space-8) 0;
+  min-width: 0;
+}
+.docs-example__title {
+  font-family: var(--fn-font-display);
+  font-size: var(--fn-text-xl);
+  font-weight: var(--fn-weight-semibold);
+  margin: 0 0 var(--fn-space-2);
+  color: var(--fn-color-text-primary);
+}
+.docs-example__description {
+  margin: 0 0 var(--fn-space-3);
+  color: var(--fn-color-text-secondary);
+}
+.docs-example__preview {
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-lg) var(--fn-radius-lg) 0 0;
+  background: var(--fn-color-paper);
+  padding: var(--fn-space-6);
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* Code blocks. Focusable so keyboard users can scroll long lines. */
+.docs-code {
+  margin: 0 0 var(--fn-space-4);
+  border: 1px solid var(--fn-color-border);
+  border-top: 0;
+  border-radius: 0 0 var(--fn-radius-lg) var(--fn-radius-lg);
+  background: var(--fn-color-surface-sunken);
+  min-width: 0;
+}
+.docs-code__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--fn-space-3);
+  padding: var(--fn-space-1) var(--fn-space-4);
+  border-bottom: 1px solid var(--fn-color-border);
+  font-size: var(--fn-text-xs);
+  color: var(--fn-color-text-tertiary);
+}
+.docs-code__lang {
+  font-family: var(--fn-font-mono);
+}
+.docs-code__pre {
+  margin: 0;
+  padding: var(--fn-space-4);
+  overflow-x: auto;
+  font-family: var(--fn-font-mono);
+  font-size: var(--fn-text-sm);
+  line-height: 1.6;
+  color: var(--fn-color-text-primary);
+}
+.docs-code__pre:focus-visible {
+  outline: 2px solid var(--fn-color-focus);
+  outline-offset: -2px;
+}
+
+/* Typed API tables. Scrollable region with a label, keyboard reachable. */
+.docs-table-wrap {
+  overflow-x: auto;
+  margin: var(--fn-space-4) 0 var(--fn-space-6);
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-md);
+}
+.docs-table-wrap:focus-visible {
+  outline: 2px solid var(--fn-color-focus);
+  outline-offset: 2px;
+}
+.docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fn-text-sm);
+  background: var(--fn-color-surface);
+}
+.docs-table caption {
+  text-align: left;
+  font-family: var(--fn-font-display);
+  font-size: var(--fn-text-lg);
+  padding: var(--fn-space-3) var(--fn-space-4);
+  color: var(--fn-color-text-primary);
+}
+.docs-table th,
+.docs-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--fn-space-3) var(--fn-space-4);
+  border-top: 1px solid var(--fn-color-border);
+  color: var(--fn-color-text-primary);
+}
+.docs-table thead th {
+  color: var(--fn-color-text-secondary);
+  font-size: var(--fn-text-xs);
+  letter-spacing: var(--fn-tracking-wide);
+  text-transform: uppercase;
+  border-top: 0;
+}
+.docs-table code {
+  font-family: var(--fn-font-mono);
+  font-size: 0.92em;
+  word-break: break-word;
+}
+.docs-required {
+  font-size: var(--fn-text-xs);
+  color: var(--fn-color-danger-text);
+  font-weight: var(--fn-weight-semibold);
+}
+
+/* Colour swatches. */
+.docs-swatches {
+  list-style: none;
+  padding: 0;
+  margin: var(--fn-space-4) 0 var(--fn-space-6);
+  display: grid;
+  gap: var(--fn-space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+}
+.docs-swatch {
+  border: 1px solid var(--fn-color-border);
+  border-radius: var(--fn-radius-md);
+  background: var(--fn-color-surface);
+  overflow: hidden;
+}
+.docs-swatch__chip {
+  height: 4.5rem;
+  border-bottom: 1px solid var(--fn-color-border);
+}
+.docs-swatch__meta {
+  padding: var(--fn-space-3);
+  font-size: var(--fn-text-xs);
+}
+.docs-swatch__meta p {
+  margin: 0;
+}
+.docs-swatch__name {
+  font-weight: var(--fn-weight-semibold);
+  color: var(--fn-color-text-primary);
+  font-size: var(--fn-text-sm);
+}
+.docs-swatch__token,
+.docs-swatch__value {
+  color: var(--fn-color-text-secondary);
+  font-family: var(--fn-font-mono);
+  word-break: break-all;
+}
+.docs-swatch__note {
+  color: var(--fn-color-text-tertiary);
+  margin-top: var(--fn-space-1) !important;
+}
+
+/* Contrast tables. */
+.docs-contrast-pass {
+  color: var(--fn-color-success-text);
+  font-weight: var(--fn-weight-semibold);
+}
+.docs-contrast-fail {
+  color: var(--fn-color-danger-text);
+  font-weight: var(--fn-weight-semibold);
+}
+
+/* Checklists: real lists, so they read as lists. */
+.docs-checklist {
+  list-style: none;
+  padding: 0;
+}
+.docs-checklist li {
+  padding-left: var(--fn-space-6);
+  position: relative;
+  margin: var(--fn-space-2) 0;
+}
+.docs-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--fn-color-success-text);
+  font-weight: var(--fn-weight-semibold);
+}
+
+/* Version and migration tables sit inside the same table styling. */
+.docs-pill {
+  display: inline-block;
+  border-radius: var(--fn-radius-pill);
+  padding: 0 var(--fn-space-2);
+  font-size: var(--fn-text-xs);
+  border: 1px solid var(--fn-color-border-strong);
+  color: var(--fn-color-text-secondary);
+}
+
+@media (max-width: 40rem) {
+  .docs-example__preview {
+    padding: var(--fn-space-4);
+  }
+}

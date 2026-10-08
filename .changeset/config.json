@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [
+    [
+      "fieldnote-ui",
+      "@fieldnote-ui/tokens",
+      "@fieldnote-ui/theme",
+      "@fieldnote-ui/icons",
+      "@fieldnote-ui/ui",
+      "@fieldnote-ui/layouts",
+      "@fieldnote-ui/charts"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": [
+    "@fieldnote-ui/docs",
+    "@fieldnote-ui/playground",
+    "@fieldnote-ui/example-*"
+  ]
+}

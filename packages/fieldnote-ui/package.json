@@ -1,0 +1,88 @@
+{
+  "name": "fieldnote-ui",
+  "version": "0.1.0",
+  "description": "FieldNote UI — A Design System for Decision Intelligence. Observe, interpret, decide, learn: the visual foundation for thinking tools.",
+  "keywords": ["design-system", "react", "decision-intelligence", "components", "layouts", "charts", "design-tokens", "accessible", "fieldnote-ui"],
+  "homepage": "https://github.com/demoapp-maker/rohadi-themes/tree/main/packages/fieldnote-ui",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": ["*.css"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./ui": {
+      "types": "./dist/ui.d.ts",
+      "import": "./dist/ui.js",
+      "require": "./dist/ui.cjs"
+    },
+    "./layouts": {
+      "types": "./dist/layouts.d.ts",
+      "import": "./dist/layouts.js",
+      "require": "./dist/layouts.cjs"
+    },
+    "./charts": {
+      "types": "./dist/charts.d.ts",
+      "import": "./dist/charts.js",
+      "require": "./dist/charts.cjs"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/icons.js",
+      "require": "./dist/icons.cjs"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "import": "./dist/theme.js",
+      "require": "./dist/theme.cjs"
+    },
+    "./tokens": {
+      "types": "./dist/tokens.d.ts",
+      "import": "./dist/tokens.js",
+      "require": "./dist/tokens.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tailwind-preset": "./tailwind-preset.cjs",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "tailwind-preset.cjs", "README.md"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demoapp-maker/rohadi-themes.git",
+    "directory": "packages/fieldnote-ui"
+  },
+  "publishConfig": { "access": "public", "provenance": true },
+  "scripts": {
+    "build": "tsup && node scripts/build-css.mjs",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@fieldnote-ui/charts": "workspace:*",
+    "@fieldnote-ui/icons": "workspace:*",
+    "@fieldnote-ui/layouts": "workspace:*",
+    "@fieldnote-ui/theme": "workspace:*",
+    "@fieldnote-ui/tokens": "workspace:*",
+    "@fieldnote-ui/ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

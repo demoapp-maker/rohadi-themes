@@ -29,3 +29,4 @@ export {
 } from './typography.js';
 export { breakpoints } from './breakpoints.js';
 export { createCssVariables, cssVar, CSS_PREFIX, type CssVariableOptions } from './css.js';
+export { contrastRatio, relativeLuminance, meetsContrast, WCAG_MINIMUM } from './contrast.js';

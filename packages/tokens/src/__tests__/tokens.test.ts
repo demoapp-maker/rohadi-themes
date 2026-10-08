@@ -100,3 +100,16 @@ describe('tokens object', () => {
     );
   });
 });
+
+describe('contrast utilities', () => {
+  it('computes known WCAG reference ratios', async () => {
+    const { contrastRatio } = await import('../index.js');
+    expect(contrastRatio('#000000', '#FFFFFF')).toBeCloseTo(21, 1);
+    expect(contrastRatio('#FFFFFF', '#FFFFFF')).toBeCloseTo(1, 5);
+  });
+
+  it('rejects malformed colours', async () => {
+    const { relativeLuminance } = await import('../index.js');
+    expect(() => relativeLuminance('red')).toThrow();
+  });
+});

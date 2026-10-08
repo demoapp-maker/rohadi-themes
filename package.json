@@ -1,0 +1,31 @@
+{
+  "name": "fieldnote-ui-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "FieldNote UI — A Design System for Decision Intelligence (monorepo).",
+  "license": "MIT",
+  "packageManager": "pnpm@10.34.6",
+  "engines": {
+    "node": ">=20.9.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "build:packages": "turbo run build --filter=./packages/*",
+    "dev": "turbo run dev --concurrency=20",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:a11y": "turbo run test:a11y",
+    "check": "turbo run typecheck test build",
+    "changeset": "changeset",
+    "version-packages": "changeset version && pnpm install --lockfile-only",
+    "release": "pnpm build:packages && changeset publish",
+    "clean": "turbo run clean && rm -rf node_modules/.cache"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.1",
+    "@types/node": "^22.10.0",
+    "turbo": "^2.11.7",
+    "typescript": "^5.9.3"
+  }
+}

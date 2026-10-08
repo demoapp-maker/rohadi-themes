@@ -1,0 +1,207 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/philosophy",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/principles",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/getting-started",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/foundations",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/observation-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/evidence-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/insight-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/decision-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/learning-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/field-note",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/notebook-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/experiment-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/research-card",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/knowledge-node",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/insight-cluster",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/learning-record",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/evidence-timeline",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/decision-panel",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/components/primitives",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/layouts",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/navigation",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/charts",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/accessibility",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/examples",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/migration",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/versioning",
+    "status": 200,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/nope",
+    "status": 404,
+    "theme": "light",
+    "violations": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  }
+]
